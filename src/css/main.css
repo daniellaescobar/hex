@@ -76,7 +76,7 @@ h1 {
 button {
   border: none;
   outline: none;
-  background: hotpink;
+  background: black;
   border-radius: 10px;
   padding: 1rem;
   color: white;
@@ -85,7 +85,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background: orange;
+  background: gray;
 }
 
 .bottom-text {
