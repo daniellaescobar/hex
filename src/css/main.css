@@ -11,6 +11,15 @@ nav {
   width: 100vw;
 }
 
+nav h2 {
+  background: none;
+  color: white;
+  padding-left: 1.5rem;
+  display: flex;
+  padding-top: 0.45rem;
+  font-family: "Lobster", cursive;
+}
+
 h1 {
   display: flex;
   flex-direction: row;
