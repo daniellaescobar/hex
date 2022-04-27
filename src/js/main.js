@@ -2,7 +2,6 @@ const base = window.location.href.includes("github.io")
   ? `/${window.location.pathname.split("/")[1]}`
   : "";
 
-// Get the elements
 var colorCards = document.querySelectorAll(".color-card");
 colorCards.forEach((colorCard) => {
   var hex = colorCard.querySelector(".hex");
@@ -16,15 +15,9 @@ colorCards.forEach((colorCard) => {
 
 var button = document.querySelector("button");
 
-// Define the action
-
 fetch("../colors")
   .then((response) => response.json())
   .then((data) => console.log(data));
-
-// Wire up the event with the action
-
-//write a function that gets 6 random numbers that occur within a range
 
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
@@ -40,10 +33,6 @@ function getFiveRandomNumber(min, max) {
   }
   return numbers;
 }
-
-// var promises = getFiveRandomNumbers(0, 14156).map((n) => {
-//   return fetch(`/colors/${n}`);
-// });
 function getColors() {
   var promises = getFiveRandomNumber(0, 14156).map((n) => {
     return fetch(`${base}/colors/${n}.json`);
@@ -86,15 +75,3 @@ function rgbToHex(red, green, blue) {
 
 button.addEventListener("click", getColors);
 getColors();
-// var numbers = getRandomNumber(0, 14156);
-
-// // max = 14156
-
-// var node = document.getElementById("colorCard");
-
-// function createBoxes(numBoxes){
-//     for (let i = 0; i < numBoxes, i++) {
-//         index = getRandomNumber(0,14156);
-//         name =
-//     }
-// }
